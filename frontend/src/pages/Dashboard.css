@@ -1,0 +1,27 @@
+.dashboard {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.dashboard h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.dashboard button {
+  display: block;
+  margin: 15px auto;
+  width: 200px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dashboard button:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,94 @@
+/* Full background */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+/* Card */
+.login-card {
+  display: flex;
+  width: 800px;
+  max-width: 90%;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Left side */
+.left {
+  flex: 1;
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left h1 {
+  font-size: 28px;
+}
+
+.left p {
+  margin-top: 10px;
+}
+
+/* Right side */
+.right {
+  flex: 1;
+  padding: 40px;
+  text-align: center;
+}
+
+.right h2 {
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.right input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Button */
+.right button {
+  width: 100%;
+  padding: 12px;
+  background: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.right button:hover {
+  background: #1a5edb;
+}
+
+/* Error */
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+/* 🔥 MOBILE FIX */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+  }
+
+  .left {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .right {
+    padding: 20px;
+  }
+}
