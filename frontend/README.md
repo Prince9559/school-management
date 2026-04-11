@@ -101,6 +101,10 @@ school-management/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/school-management.git
+git clone https://github.com/Prince9559/school-management
+
+admin login 
+gmail:admin@gmail.com
+password:1234
  
 
