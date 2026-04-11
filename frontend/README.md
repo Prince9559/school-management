@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# 🎓 School Management Mini System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application to manage students and their assigned tasks/homework.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+### 🔐 Authentication
+- Admin Login (JWT आधारित authentication)
+- Protected dashboard access
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 👨‍🎓 Student Management
+- Add new students
+- View all students
+- Delete students
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 📚 Task Management
+- Assign tasks to students
+- View all assigned tasks
+- Mark tasks as completed
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
 
-### `npm run build`
+### Frontend
+- React.js
+- CSS (Custom UI + Animations)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend
+- Node.js
+- Express.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Database
+- MySQL (XAMPP)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📂 Project Structure
+school-management/
+│
+├── backend/
+│   ├── config/
+│   │   └── db.js
+│   │
+│   ├── controllers/
+│   │   ├── studentController.js
+│   │   ├── taskController.js
+│   │   └── authController.js
+│   │
+│   ├── routes/
+│   │   ├── studentRoutes.js
+│   │   ├── taskRoutes.js
+│   │   └── authRoutes.js
+│   │
+│   ├── models/   (optional for MySQL)
+│   │
+│   ├── middleware/
+│   │   └── authMiddleware.js
+│   │
+│   ├── .env
+│   ├── server.js
+│   └── package.json
+│
+├── frontend/
+│   ├── public/
+│   │
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Navbar.js
+│   │   │   └── Navbar.css
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── Login.js
+│   │   │   ├── Login.css
+│   │   │   ├── Dashboard.js
+│   │   │   ├── Dashboard.css
+│   │   │   ├── Students.js
+│   │   │   ├── Students.css
+│   │   │   ├── Tasks.js
+│   │   │   └── Tasks.css
+│   │   │
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   │
+│   │   ├── App.js
+│   │   ├── App.css
+│   │   └── index.js
+│   │
+│   └── package.json
+│
+└── README.md
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ⚙️ Setup Instructions
 
-## Learn More
+### 1️⃣ Clone Repository
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git clone https://github.com/your-username/school-management.git
+ 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

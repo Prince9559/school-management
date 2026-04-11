@@ -4,9 +4,17 @@ import "./Dashboard.css";
 const Dashboard = ({ setPage }) => {
   return (
     <div className="dashboard">
-      <h2>Dashboard</h2>
-      <button onClick={() => setPage("students")}>Students</button>
-      <button onClick={() => setPage("tasks")}>Tasks</button>
+      <div className="dashboard-content">
+        <h1>🚀 Dashboard</h1>
+
+        <button onClick={() => setPage("students")}>
+          Students
+        </button>
+
+        <button onClick={() => setPage("tasks")}>
+          Tasks
+        </button>
+      </div>
     </div>
   );
 };

@@ -1,27 +1,73 @@
 .dashboard {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: #0f2027;
+}
+.dashboard::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+
+  background: conic-gradient(
+    #ff6a00,
+    #ee0979,
+    #00c6ff,
+    #0072ff,
+    #ff6a00
+  );
+
+  animation: rotateBg 12s linear infinite;
+  z-index: 0;
+}
+.dashboard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(80px);
+  z-index: 1;
+}
+
+/* 🔥 Rotate Animation */
+@keyframes rotateBg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.dashboard-content {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  margin-top: 60px;
-}
-
-.dashboard h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
-}
-
-.dashboard button {
-  display: block;
-  margin: 15px auto;
-  width: 200px;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(45deg, #ff416c, #ff4b2b);
   color: white;
-  font-size: 16px;
+  margin-top: 120px;
+}
+
+.dashboard-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.dashboard-content button {
+  margin: 10px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.2);
+  color: white;
+
   cursor: pointer;
   transition: 0.3s;
 }
 
-.dashboard button:hover {
-  transform: scale(1.05);
+.dashboard-content button:hover {
+  background: rgba(255,255,255,0.4);
+  transform: translateY(-3px);
 }

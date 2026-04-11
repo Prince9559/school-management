@@ -15,23 +15,16 @@ const Navbar = () => {
 
   return (
     <div>
-      {/* Navbar */}
       <div className="nav">
-        <h2 className="logo">Student Manager</h2>
+        <h2 className="logo">🎓 Student Manager</h2>
 
-        <button onClick={() => setPage("dashboard")}>Dashboard</button>
-
-        <button
-          onClick={() => {
-            localStorage.removeItem("token");
-            setAuth(false);
-          }}
-        >
+        <div className="nav-buttons">
+          <button onClick={() => setPage("dashboard")}>Dashboard</button>
+          <button onClick={() => { localStorage.removeItem("token");setAuth(false);}}>
           Logout
-        </button>
+          </button>
+        </div>
       </div>
-
-      {/* Page Render */}
       {page === "dashboard" && <Dashboard setPage={setPage} />}
       {page === "students" && <Students setPage={setPage} />}
       {page === "tasks" && <Tasks setPage={setPage} />}

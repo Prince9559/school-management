@@ -1,22 +1,133 @@
-.students {
-  width: 400px;
-  margin: auto;
+body {
+  background: linear-gradient(-45deg, #1e3c72, #982a44, #1acb11, #2575fc);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
 }
 
-li {
-  margin: 10px 0;
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.students {
+  width: 420px;
+  margin: 60px auto;
+  padding: 25px;
+
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+  text-align: center;
+  color: white;
+
+  animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.header {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 24px;
 }
 
 .back-btn {
-  margin-bottom: 15px;
-  padding: 8px 12px;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  padding: 6px 12px;
   border: none;
-  background: #444;
-  color: white;
   border-radius: 6px;
+
+  background: rgba(0,0,0,0.5);
+  color: white;
+
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .back-btn:hover {
-  background: #222;
+  background: black;
+  transform: scale(1.05);
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 12px;
+  width: 95%;
+
+  border-radius: 8px;
+  border: none;
+  outline: none;
+
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+input::placeholder {
+  color: #ddd;
+}
+
+button {
+  margin: 8px;
+  padding: 10px 16px;
+
+  border-radius: 8px;
+  border: none;
+
+  background: #00c6ff;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0072ff;
+  transform: translateY(-2px);
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+li {
+  background: rgba(255,255,255,0.2);
+  margin: 10px 0;
+  padding: 12px;
+
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.3s;
+}
+
+li:hover {
+  transform: scale(1.03);
+  background: rgba(255,255,255,0.3);
+}
+
+li button {
+  background: #ff4d4d;
+}
+
+li button:hover {
+  background: #cc0000;
 }

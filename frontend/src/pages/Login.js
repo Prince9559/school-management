@@ -27,32 +27,17 @@ const Login = ({ setAuth }) => {
 
       <div className="login-card">
 
-        {/* Left */}
         <div className="left">
           <h1>Welcome</h1>
           <p>Manage students & tasks easily 🚀</p>
         </div>
 
-        {/* Right */}
         <div className="right">
           <h2>Login</h2>
 
           {error && <p className="error">{error}</p>}
-
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-
+          <input type="email" placeholder="Email"value={email}onChange={(e) => setEmail(e.target.value)}/>
+          <input type="password"placeholder="Password"value={password}onChange={(e) => setPassword(e.target.value)}/>
           <button onClick={handleLogin}>LOGIN</button>
         </div>
 

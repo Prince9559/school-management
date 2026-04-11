@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import API from "../services/api";
 import "./Tasks.css";
 
-const Tasks = ({ setPage }) => { // 👈 RECEIVE PROP
+const Tasks = ({ setPage }) => { 
   const [tasks, setTasks] = useState([]);
   const [title, setTitle] = useState("");
   const [studentId, setStudentId] = useState("");
@@ -56,27 +56,18 @@ const Tasks = ({ setPage }) => { // 👈 RECEIVE PROP
   return (
   <div className="tasks">
 
-    {/* 🔥 Header */}
     <div className="header">
       <button className="back-btn" onClick={() => setPage("dashboard")}>
-        ⬅ Back
+      ⬅ Back
       </button>
       <h2>Tasks</h2>
     </div>
 
     {error && <p className="error">{error}</p>}
 
-    <input
-      placeholder="Task Title"
-      value={title}
-      onChange={(e) => setTitle(e.target.value)}
-    />
+    <input placeholder="Task Title"value={title}onChange={(e) => setTitle(e.target.value)} />
 
-    <input
-      placeholder="Student ID"
-      value={studentId}
-      onChange={(e) => setStudentId(e.target.value)}
-    />
+    <input placeholder="Student ID"value={studentId}onChange={(e) => setStudentId(e.target.value)}/>
 
     <button onClick={addTask}>Assign</button>
 

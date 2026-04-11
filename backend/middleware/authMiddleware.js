@@ -5,8 +5,8 @@ module.exports = (req, res, next) => {
 
   if (!token) return res.status(401).json({ msg: "No token" });
 
-  // 🔥 FIX: Bearer remove karo
-  if (token.startsWith("Bearer ")) {
+  if (token.startsWith("Bearer ")) 
+  {
     token = token.split(" ")[1];
   }
 
@@ -14,7 +14,8 @@ module.exports = (req, res, next) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = decoded;
     next();
-  } catch {
+  } catch 
+  {
     res.status(401).json({ msg: "Invalid token" });
   }
 };

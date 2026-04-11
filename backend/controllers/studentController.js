@@ -1,6 +1,5 @@
 const db = require("../config/db");
 
-// Add Student
 exports.addStudent = (req, res) => {
   const { name, className } = req.body;
   db.query(
@@ -13,7 +12,6 @@ exports.addStudent = (req, res) => {
   );
 };
 
-// Get Students
 exports.getStudents = (req, res) => {
   db.query("SELECT * FROM students", (err, result) => {
     if (err) return res.status(500).json(err);
@@ -21,7 +19,6 @@ exports.getStudents = (req, res) => {
   });
 };
 
-// Update Student
 exports.updateStudent = (req, res) => {
   const { id } = req.params;
   const { name, className } = req.body;
@@ -36,10 +33,8 @@ exports.updateStudent = (req, res) => {
   );
 };
 
-// Delete Student
 exports.deleteStudent = (req, res) => {
   const { id } = req.params;
-
   db.query("DELETE FROM students WHERE id=?", [id], (err) => {
     if (err) return res.status(500).json(err);
     res.json({ message: "Deleted" });
