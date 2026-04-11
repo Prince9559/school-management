@@ -37,6 +37,7 @@
   flex: 1;
   padding: 40px;
   text-align: center;
+  
 }
 
 .right h2 {
@@ -49,6 +50,7 @@
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 6px;
+  color: black;
 }
 
 .right button {
